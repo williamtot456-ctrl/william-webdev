@@ -1,0 +1,148 @@
+/* FOOD OPTIONS */
+.food-options {
+  padding: 60px 20px;
+  text-align: center;
+}
+.food-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #000;
+  font-family: sans-serif, Verdana, Tahoma;
+}
+.food-title2 {
+  color: #000;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-family: sans-serif, Verdana, Tahoma;
+}
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+.food-column {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+.food-column:hover {
+  transform: translateY(-5px);
+}
+.food-column h2 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: #000;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.food-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.food-column li {
+  padding: 6px 0;
+  font-size: 20px;
+  color: #444;
+  border-bottom: 1px dashed #eee;
+}
+.food-column li:last-child {
+  border-bottom: none;
+}
+
+/* MENU PACKAGE */
+.menu-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.menu-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #222;
+  font-family: sans-serif, Verdana, Tahoma;
+}
+.menu-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  font-family: sans-serif, Verdana, Tahoma;
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.menu-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.menu-content:hover {
+  transform: translateY(-5px);
+}
+.menu-content h2 {
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+.menu-content ul {
+  padding: 0;
+  margin: 15px 0;
+}
+.menu-content li {
+  list-style: none;
+  padding: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+.price {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  background: #8b0000;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+/* PACKAGE SECTION */
+#packed-meals {
+  padding: 40px 20px;
+  text-align: center;
+}
+#packed-meals h2 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+#packed-meals span {
+  color: rgb(235, 248, 52);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}

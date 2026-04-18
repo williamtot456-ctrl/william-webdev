@@ -1,0 +1,78 @@
+/* Hero section */
+.hero {
+  background-image: url("../imgs/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* Hero Text */
+.hero-content h1 {
+  font-size: 90px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family:
+    DM Serif Display,
+    serif;
+}
+
+.hero-content p {
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  font-family:
+    DM Serif Display,
+    serif;
+}
+/* Hero Button */
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-btn1 {
+  display: inline-block;
+  padding: 1.3rem 2.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(124, 18, 18);
+  color: #fff;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  min-width: 200px;
+  text-align: center;
+}
+.hero-btn1:hover {
+  background-color: rgb(150, 30, 30);
+  transform: scale(1.05);
+}
+
+.hero-btn2 {
+  display: inline-block;
+  padding: 1.3rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgba(56, 53, 53, 0.747);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.hero-btn2:hover {
+  transform: scale(1.05);
+}
+/* Hide scroll in Sidebar */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

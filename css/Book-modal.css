@@ -1,0 +1,202 @@
+/* MODAL */
+.book-modal {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  cursor: text;
+  z-index: 99999;
+}
+.book-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Booking form modal */
+.book-content {
+  position: relative;
+  width: min(760px, 90%);
+  max-height: 85vh;
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-40px);
+  overflow-y: auto;
+  opacity: 0;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+.book-modal.is-open .book-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Booking form "X" Close button */
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+/* Booking Form Title */
+.book-content h2 {
+  margin-bottom: 12px;
+  font-size: 1.9rem;
+  color: #222;
+}
+
+.book-content p {
+  margin-bottom: 26px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Booking Form Container */
+.book-form {
+  display: grid;
+  gap: 18px;
+}
+
+/* Flex row from FN to GN */
+.form-row {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Three column for Event date to GN */
+.form-row.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* full for Address input */
+label.full-width {
+  display: grid;
+  gap: 8px;
+}
+/* Container for all input */
+.form-row label,
+.book-form > label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d8d8d8;
+  border-radius: 14px;
+  background: #fafafa;
+  font-size: 0.98rem;
+  color: #222;
+}
+/* Form input focus */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: rgb(80, 10, 10);
+  background: #fff;
+}
+/* Form Msg input box */
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+/* Book Form Submit Button */
+.book-submit {
+  width: 100%;
+  padding: 16px 18px;
+  border: none;
+  border-radius: 14px;
+  background: rgb(80, 10, 10);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.book-submit:hover {
+  background: rgb(138, 28, 28);
+}
+
+@media (max-width: 760px) {
+  .form-row,
+  .form-row.three-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Submit Modal */
+.book-submit-confirm {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+.book-submit-confirm-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.book-submit-confirm-content p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+/* Submit Modal Box */
+.book-content.submitted {
+  width: min(470px, 100%);
+  padding: 25px 35px;
+  height: 150px;
+  overflow: hidden;
+}
+/* Opening transition */
+.book-submit-confirm.visible {
+  display: flex;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Form Modal Closing transition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.book-form-panel.hidden {
+  display: none !important;
+}
+.book-content.hidden {
+  display: none !important;
+}

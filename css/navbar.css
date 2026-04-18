@@ -1,0 +1,221 @@
+/* NAVBAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Page Transition Animations */
+body {
+  animation: fadeInPage 0.8s ease-in forwards;
+  color: #333;
+}
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 1rem 5%;
+  background-color: rgb(80, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* LOGO */
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  height: 55px;
+  margin-left: 2rem;
+}
+
+.logoPipe {
+  color: rgb(151, 66, 66);
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  user-select: none;
+}
+
+.logoName {
+  color: rgb(151, 66, 66);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin-left: auto;
+  margin-right: 5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 0 2px;
+  transition:
+    background-size 500ms ease,
+    transform 150ms ease,
+    color 250ms ease;
+  font-family:
+    dm serif display,
+    serif;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
+  background-size: 100% 2px;
+  color: rgb(156, 119, 119);
+}
+.nav-links li:first-child {
+  margin-left: 50px;
+}
+/* Menu */
+.hamburger {
+  display: none;
+}
+.sidebar {
+  display: none;
+}
+/* Sidebar */
+@media (max-width: 950px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(80, 10, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 9999;
+    padding-top: 5rem;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .sidebar.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  /* Sidebar Links */
+  .sidebar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .sidebar-links a {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: left;
+  }
+  /* Sidebar Hover transition */
+  .sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    transition:
+      background-size 500ms ease,
+      transform 150ms ease,
+      color 250ms ease;
+    font-family:
+      DM Serif Display,
+      serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .sidebar a:hover {
+    color: rgb(156, 119, 119);
+  }
+  /* Sidebar close */
+  .side-close {
+    position: absolute;
+    top: 1.3rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+}
+/* Sidebar Logo & H1 */
+.sidebar-logo {
+  text-align: center;
+  display: flex;
+}
+
+.sidebar-logo img {
+  height: 90px;
+}
+
+.sidebar-logo,
+.logoPipe h1 {
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.sidebar-contact {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+/* Sidebar Contacts */
+.sidebar-contact h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  color: #ffffff;
+  font-family: "DM Serif Display", serif;
+}
+
+.sidebar-contact p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #b6adad;
+  margin-bottom: 1.5rem;
+  font-family: "DM Serif Display", serif;
+}

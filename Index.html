@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/Index-hero.css" />
+    <link rel="stylesheet" href="css/Book-modal.css" />
+    <link rel="stylesheet" href="css/serv-about.css" />
+    <link rel="stylesheet" href="css/menu-packages.css" />
+    <script src="js/book.js"></script>
+    <script src="js/menu-bar.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBDEV</title>
+  </head>
+  <body>
+    <!-- NAVBAR FETCH-->
+    <div id="navbar-container"></div>
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          const container = document.getElementById("navbar-container");
+          container.innerHTML = data;
+
+          bookModal();
+          hamburgerMenu();
+        });
+    </script>
+    <!-- Scroll fix-->
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.addEventListener("load", () => window.scrollTo(0, 0));
+    </script>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Kastilyos Kitchen</h1>
+        <p>Experience traditional flavors with a modern twist.</p>
+        <div class="hero-btns">
+          <a class="hero-btn1" id="hero_book">Book now</a>
+          <a href="/" class="hero-btn2">View Our Services →</a>
+        </div>
+      </div>
+    </section>
+    <!-- BOOK MODAL -->
+    <div class="book-modal" id="book_modal">
+      <div class="book-content">
+        <button type="button" class="modal-close" id="book_close">
+          &times;
+        </button>
+        <!--Booking Form-->
+        <div class="book-form-panel" id="book_form_panel">
+          <h2>Book a Schedule</h2>
+          <p>Fill out the form below and we’ll contact you soon.</p>
+
+          <form class="book-form" id="book_form">
+            <div class="form-row">
+              <label>
+                First Name *
+                <input
+                  class="form-input"
+                  type="text"
+                  name="firstName"
+                  placeholder="Enter Your First Name"
+                  required
+                  autofocus
+                />
+              </label>
+              <label>
+                Last Name *
+                <input
+                  class="form-input"
+                  type="text"
+                  name="lastName"
+                  placeholder="Enter Your Last Name"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Email *
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </label>
+              <label>
+                Phone/Mobile *
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Mobile Number"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="form-row three-col">
+              <label>
+                Event Date *
+                <input
+                  class="form-input"
+                  type="date"
+                  name="eventDate"
+                  required
+                />
+              </label>
+              <label>
+                Event Time *
+                <input
+                  class="form-input"
+                  type="time"
+                  name="eventTime"
+                  required
+                />
+              </label>
+              <label>
+                Guest Number *
+                <input
+                  class="form-input"
+                  type="number"
+                  name="guests"
+                  placeholder="Guest Number"
+                  min="1"
+                  required
+                />
+              </label>
+            </div>
+
+            <label class="full-width">
+              Address Event Venue *
+              <input
+                class="form-input"
+                type="text"
+                name="venue"
+                placeholder="Complete Address"
+                required
+              />
+            </label>
+
+            <label>
+              Message *
+              <textarea
+                class="form-textarea"
+                name="message"
+                placeholder="Enter Your Message"
+                required
+              ></textarea>
+            </label>
+
+            <button class="book-submit" type="submit">BOOK A SCHEDULE</button>
+          </form>
+        </div>
+        <div class="book-submit-confirm" id="book_submit_confirm">
+          <div class="book-submit-confirm-content">
+            <h1>Booking submitted</h1>
+            <p>
+              Your booking request has been received. We’ll contact you soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SERVICES SECTION -->
+    <header class="page-header">
+      <h1 class="page-title">Our Catering Services</h1>
+    </header>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Types of Events We Cater</h3>
+            <ul class="list-clean">
+              <li>✓ Weddings</li>
+              <li>✓ Birthday Parties</li>
+              <li>✓ Corporate Events</li>
+              <li>✓ Debuts and Anniversaries</li>
+              <li>✓ Baptisms</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">What's Included</h3>
+            <ul class="list-clean">
+              <li>✓ Professional Food Prep</li>
+              <li>✓ Timely Setup & Delivery</li>
+              <li>✓ Tables & Chairs</li>
+              <li>✓ Trained Serving Staff</li>
+              <li>✓ Event Cleanup</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About us Section-->
+    <section id="about-us">
+      <div class="container">
+        <h1 class="service-title about-header">About Us</h1>
+        <div class="card">
+          <div class="about-container">
+            <div class="about-image">
+              <img src="img/pack1.jpg" alt="pic" />
+            </div>
+
+            <div class="about-text">
+              <h2>Kastilyos Kitchen</h2>
+              <p>
+                Founded in 2025 by Jennifer C. Castillo, Kastilyos Kitchen began
+                with a love for authentic Filipino cooking and has grown into a
+                trusted catering service in Antipolo City. We specialize in
+                bringing people together through food, whether it’s a wedding,
+                birthday, corporate event, or family celebration. Every dish is
+                prepared from scratch, served with care, and designed to leave
+                guests delighted and satisfied.
+              </p>
+              <a href="inquire.html" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="food-options" id="menu">
+      <!-- ... your menu content ... -->
+      <h1 class="food-title">Menu</h1>
+      <h2 class="food-title2">
+        All of our food is made from scratch and prepared fresh each and every
+        day. We request 36 hours notice on all food orders. We understand that
+        last minute orders will come up, and we will do our best to accommodate
+        every request.
+      </h2>
+      <div class="food-container">
+        <!-- Beef -->
+        <div class="food-column">
+          <h2>BEEF</h2>
+          <ul>
+            <li>Beef Asado</li>
+            <li>Beef Morcon</li>
+            <li>Beef Mechado</li>
+            <li>Beef Kare-Kare</li>
+            <li>Beef with Broccoli</li>
+            <li>Beef Caldereta</li>
+            <li>Lengua Estofado</li>
+          </ul>
+        </div>
+
+        <!-- Pork -->
+        <div class="food-column">
+          <h2>PORK</h2>
+          <ul>
+            <li>Salt & Pepper Spareribs</li>
+            <li>Pork Adobo</li>
+            <li>Pork BBQ</li>
+            <li>Lechon Kawali</li>
+            <li>Lumpiang Shanghai</li>
+            <li>Menudo</li>
+            <li>Pork Mechado</li>
+          </ul>
+        </div>
+
+        <!-- Seafood -->
+        <div class="food-column">
+          <h2>SEAFOOD</h2>
+          <ul>
+            <li>Garlic Buttered Shrimp</li>
+            <li>Fish Fillet</li>
+            <li>Rellenong Bangus</li>
+            <li>Grilled Blue Marlin</li>
+            <li>Butter Shrimp</li>
+            <li>Calamares</li>
+            <li>Sweet & Sour Shrimp</li>
+          </ul>
+        </div>
+
+        <div class="food-column">
+          <h2>CHICKEN</h2>
+          <ul>
+            <li>Chicken Barbecue</li>
+            <li>Chicken Lollipop</li>
+            <li>Chicken Oyster Sauce</li>
+            <li>Breaded Chicken</li>
+            <li>Chicken Caldereta</li>
+            <li>Chicken Teriyaki</li>
+            <li>Chicken with Pineapple</li>
+            <li>Chicken Cordon Bleu</li>
+            <li>Buffalo Wings</li>
+            <li>Chicken Pastel</li>
+            <li>Garlic Chicken</li>
+          </ul>
+        </div>
+
+        <div class="food-column">
+          <h2>PASTA</h2>
+          <ul>
+            <li>Penne Pastas</li>
+            <li>Bihon Guisado</li>
+            <li>Canton Guisado</li>
+            <li>Sotanghon Canton</li>
+            <li>Pansit Malabon</li>
+            <li>Spaghetti</li>
+            <li>Carbonara</li>
+            <li>Mushroom Pasta</li>
+            <li>Lasagna</li>
+            <li>Baked Macaroni</li>
+          </ul>
+        </div>
+
+        <div class="food-column">
+          <h2>VEGGIES</h2>
+          <ul>
+            <li>Pinakbet</li>
+            <li>Vegetables Stir-fry</li>
+            <li>Sweet Peas with Quail Eggs</li>
+            <li>Chopseuy</li>
+            <li>Buttered Vegetables</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bundle -->
+    <section class="menu-section">
+      <!-- ... your bundle content ... -->
+      <h1 class="menu-title">Bundle</h1>
+      <p class="menu-subtitle">
+        In Kastilyos Kitchen we ensure we cater excellent foods and services
+        that would not disappoint our lovely clients!
+      </p>
+
+      <div class="menu-container">
+        <!-- PACKAGE 1 -->
+        <div class="menu-content">
+          <h2>Package A</h2>
+          <ul>
+            <li>✔ Beef</li>
+            <li>✔ Pork</li>
+            <li>✔ Chicken</li>
+            <li>✔ Seafood</li>
+            <li>✔ Pasta or Veggies</li>
+            <li>✔ Rice</li>
+          </ul>
+          <span class="price">Php 390/head</span>
+        </div>
+
+        <!-- PACKAGE 2 -->
+
+        <div class="menu-content">
+          <h2>Package B</h2>
+          <ul>
+            <li>✔ Beef</li>
+            <li>✔ Pork</li>
+            <li>✔ Chicken/pork</li>
+            <li>✔ Seafood</li>
+            <li>✔ Pasta or Veggies</li>
+            <li>✔ Rice</li>
+          </ul>
+          <span class="price">Php 330/head</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packed Meals -->
+    <section id="packed-meals">
+      <!-- ... your gallery content ... -->
+      <h2>Food Trays & <span>Packed Meal</span> Packages</h2>
+
+      <!-- Image Grid -->
+      <div class="gallery">
+        <img src="img/pack1.jpg" alt="pack" />
+        <img src="img/pack2.jpg" alt="" />
+        <img src="img/pack3.jpg" alt="" />
+        <img src="img/pack4.jpg" alt="" />
+        <img src="img/pack5.jpg" alt="" />
+        <img src="img/pack6.jpg" alt="" />
+        <img src="img/pack7.jpg" alt="" />
+        <img src="img/pack8.jpg" alt="" />
+        <img src="img/pack9.jpg" alt="" />
+        <img src="img/pack10.jpg" alt="" />
+        <img src="img/pack11.jpg" alt="" />
+        <img src="img/pack13.jpg" alt="" />
+        <img src="img/pack14.jpg" alt="" />
+        <img src="img/pack15.jpg" alt="" />
+        <img src="img/pack16.jpg" alt="" />
+        <img src="img/pack17.jpg" alt="" />
+        <img src="img/pack18.jpg" alt="" />
+        <img src="img/pack19.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-col">
+          <img src="imgs/footer-logo.jpg" alt="Logo" class="footer-logo" />
+          <p>
+            We specialize in catering services and bulk food orders, bringing
+            the heart and soul of traditional Filipino cuisine from our kitchen
+            to your table.
+          </p>
+          <p>Serving up lutong bahay classics for every occasion!</p>
+        </div>
+        <div class="footer-col">
+          <h3>Reach Us</h3>
+          <div class="contact-item">
+            📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City
+          </div>
+          <div class="contact-item">📞 0968 602 6736 | 0921 421 2687</div>
+          <div class="contact-item">📩 castillohannafiyah14@gmail.com</div>
+        </div>
+        <div class="footer-col">
+          <h3>Types of Events We Cater</h3>
+          <p>✓ Weddings</p>
+          <p>✓ Birthday Parties</p>
+          <p>✓ Corporate Events</p>
+          <p>✓ Debuts and Anniversaries</p>
+          <p>✓ Baptisms</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; ALL RIGHTS RESERVED | KASTILYOS KITCHEN 2025</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+/* HERO SECTION */
+.hero-inquire {
+  background-color: rgb(219, 213, 213);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  min-height: 100vh;
+  margin-top: 50px;
+}
+/* Inquire H1 & P */
+.content-inquire h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  color: #470e0e;
+  font-family: "DM Serif Display", serif;
+}
+
+.content-inquire p {
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #000000;
+  font-family: "DM Serif Display", serif;
+}
+.reach-us h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  color: #470e0e;
+  font-family: "DM Serif Display", serif;
+}
+
+.reach-us p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #000000;
+  margin-bottom: 3.5rem;
+  font-family: "DM Serif Display", serif;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+/* Form Flex Container */
+.form-container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+/* Form FN to PN Flex div */
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+/* Form FN to PN Title */
+.user-details .input-box .details {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  font-weight: bold;
+}
+
+/* Form FN to PN Input Box */
+.user-details .input-box input {
+  height: 50px;
+  width: 100%;
+  font-size: 0.95rem;
+  outline: none;
+  border-radius: 14px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+}
+
+/* Form Inq & Msg Title */
+.user-details .Inq-box .Inq-tit,
+.Msg-box .Msg-tit {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Form Inq Input Box */
+.user-details .Inq-box input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+}
+
+/* Form Msg Input Box */
+.user-details .Msg-box textarea {
+  height: 135px;
+  width: 100%;
+  outline: none;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  padding-left: 15px;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+}
+
+/* Form Inq div */
+.user-details .Inq-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Form Msg div */
+.user-details .Msg-box {
+  width: 100%;
+}
+
+/* Form Input box Focus */
+.user-details .input-box input:focus,
+.user-details .Inq-box input:focus,
+.user-details .Msg-box textarea:focus {
+  border-color: rgb(80, 10, 10);
+  border-width: 2px;
+}
+
+/* Form Submit div */
+form .submit {
+  height: 50px;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Form Submit Container */
+form .submit input {
+  height: 100%;
+  width: 35%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 14px;
+  background-color: rgb(80, 10, 10);
+}
+/* Form Submit Hover */
+form .submit input:hover {
+  background: rgb(138, 28, 28);
+}
+
+/* Form & Reach us Flex Media query */
+.inquire-wrap {
+  display: flex;
+  gap: 6rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.content-inquire,
+.reach-us {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .inquire-wrap {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  form .submit input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/Inquire-form.css" />
+    <link rel="stylesheet" href="css/Inquire-submit-modal.css" />
+    <link rel="stylesheet" href="css/serv-about.css" />
+    <script src="js/menu-bar.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBDEV</title>
+  </head>
+  <body>
+    <!-- NAVBAR FETCH-->
+    <div id="navbar-container"></div>
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          const container = document.getElementById("navbar-container");
+          container.innerHTML = data;
+          hamburgerMenu();
+        });
+    </script>
+    <!-- Scroll fix-->
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.addEventListener("load", () => window.scrollTo(0, 0));
+    </script>
+    <section class="hero-inquire">
+      <div class="inquire-wrap">
+        <div class="content-inquire">
+          <h1>Inquire</h1>
+          <p>
+            We’d love to hear from you! Send us a message with your questions,
+            requests, or event details
+          </p>
+          <div class="form-container">
+            <form id="Inquire-form" action="#">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">First Name *</span>
+                  <input
+                    type="text"
+                    placeholder="Enter Your First Name"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Last Name *</span>
+                  <input
+                    type="text"
+                    placeholder="Enter Your Last Name"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Email *</span>
+                  <input type="email" placeholder="Email Address" required />
+                </div>
+                <div class="input-box">
+                  <span class="details">Phone/Mobile *</span>
+                  <input type="tel" placeholder="Mobile Number" required />
+                </div>
+                <div class="Inq-box">
+                  <span class="Inq-tit">Inquiries *</span>
+                  <input
+                    type="text"
+                    placeholder="Enter Your Inquiry"
+                    required
+                  />
+                </div>
+                <div class="Msg-box">
+                  <span class="Msg-tit">Message *</span>
+                  <textarea
+                    placeholder="Enter Your Message"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="submit">
+                <input id="submit" type="submit" value="SUBMIT" />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="reach-us">
+          <h1>Reach Us</h1>
+          <p>
+            Have questions or need more details? Reach out to our team and we’ll
+            be happy to assist you with your event planning needs.
+          </p>
+          <h1>Phone</h1>
+          <p>📞 0968 602 6736 | 0921 421 2687</p>
+          <h1>Email</h1>
+          <p>📩 castillohannafiyah14@gmail.com</p>
+          <h1>Address</h1>
+          <p>📍151 aster loop st, antipolo valley, mambugan, antipolo city</p>
+        </div>
+
+        <div class="submit-modal" id="submit_modal">
+          <div class="submit-content">
+            <span class="submit-close" id="submit_close">&times;</span>
+            <h1>Thank You For Reaching Out!</h1>
+            <p>We will get back to you soon.</p>
+          </div>
+        </div>
+        <!-- inquire modal js -->
+        <script>
+          const submit = document.getElementById("submit");
+          const submit_modal = document.getElementById("submit_modal");
+          const form = document.getElementById("Inquire-form");
+          const submit_close = document.getElementById("submit_close");
+
+          submit.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            if (form.checkValidity()) {
+              submit_modal.classList.add("show");
+              form.reset();
+            } else {
+              form.reportValidity();
+            }
+          });
+          submit_close.addEventListener("click", () => {
+            submit_modal.classList.remove("show");
+          });
+        </script>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-col">
+          <img src="imgs/footer-logo.jpg" alt="Logo" class="footer-logo" />
+          <p>
+            We specialize in catering services and bulk food orders, bringing
+            the heart and soul of traditional Filipino cuisine from our kitchen
+            to your table.
+          </p>
+          <p>Serving up lutong bahay classics for every occasion!</p>
+        </div>
+        <div class="footer-col">
+          <h3>Reach Us</h3>
+          <div class="contact-item">
+            📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City
+          </div>
+          <div class="contact-item">📞 0968 602 6736 | 0921 421 2687</div>
+          <div class="contact-item">📩 castillohannafiyah14@gmail.com</div>
+        </div>
+        <div class="footer-col">
+          <h3>Types of Events We Cater</h3>
+          <p>✓ Weddings</p>
+          <p>✓ Birthday Parties</p>
+          <p>✓ Corporate Events</p>
+          <p>✓ Debuts and Anniversaries</p>
+          <p>✓ Baptisms</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; ALL RIGHTS RESERVED | KASTILYOS KITCHEN 2025</div>
+      </div>
+    </footer>
+  </body>
+</html>
