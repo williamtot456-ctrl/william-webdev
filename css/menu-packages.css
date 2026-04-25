@@ -147,26 +147,3 @@
   transform: scale(1.05);
 }
 
-@media (min-width: 768px) {
-  .food-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .menu-container {
-    flex-direction: row;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .food-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
