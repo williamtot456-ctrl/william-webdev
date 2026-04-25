@@ -147,3 +147,97 @@
   transform: scale(1.05);
 }
 
+/* PHONE */
+@media (max-width: 600px) {
+  .food-title {
+    font-size: 26px;
+  }
+
+  .food-title2 {
+    font-size: 14px;
+  }
+
+  .food-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .food-column li {
+    font-size: 15px;
+  }
+
+  .menu-title {
+    font-size: 24px;
+  }
+
+  .menu-subtitle {
+    font-size: 14px;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+
+  #packed-meals h2 {
+    font-size: 28px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery img {
+    height: 150px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .food-title {
+    font-size: 32px;
+  }
+
+  .food-title2 {
+    font-size: 16px;
+  }
+
+  .food-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .food-column li {
+    font-size: 16px;
+  }
+
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #packed-meals h2 {
+    font-size: 38px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  .food-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .gallery img {
+    height: 240px;
+  }
+}
