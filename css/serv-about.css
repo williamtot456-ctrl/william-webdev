@@ -159,3 +159,13 @@ body {
   flex-wrap: wrap;
   font-size: 14px;
 }
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-container {
+    flex-direction: row;
+  }
+}
