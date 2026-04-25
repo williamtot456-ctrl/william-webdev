@@ -160,18 +160,23 @@ body {
   font-size: 14px;
 }
 
-* RESPONSIVE */
+
+  /* PHONE */
 @media (max-width: 600px) {
-  .page-title {
-    font-size: 1.5rem;
+  .page-header {
+    padding-top: 2rem;
   }
 
-  .grid-2 {
-    grid-template-columns: 1fr;
+  .page-title {
+    font-size: 1.4rem;
   }
 
   .section {
     padding: 2rem 1rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
   }
 
   #about-us {
@@ -186,39 +191,26 @@ body {
   .about-image img {
     max-width: 100%;
     height: 220px;
+    object-fit: cover;
   }
 
   .about-text {
     height: auto;
   }
 
-  .footer {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .footer-col {
-    min-width: 100%;
-  }
-
-  .footer-bottom {
-    padding: 15px 1rem;
-    text-align: center;
+  .service-title {
+    font-size: 1.4rem;
   }
 }
 
 /* TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .page-title {
-    font-size: 1.9rem;
+  .section {
+    padding: 3rem 2%;
   }
 
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section {
-    padding: 3rem 2%;
   }
 
   #about-us {
@@ -233,19 +225,11 @@ body {
   .about-image img {
     max-width: 100%;
     height: 300px;
+    object-fit: cover;
   }
 
   .about-text {
     height: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    padding: 3rem 2rem;
-  }
-
-  .footer-col {
-    flex: 1 1 45%;
   }
 }
 
@@ -258,10 +242,6 @@ body {
 
   .about-image img {
     max-width: 350px;
-    height: 400px;
-  }
-
-  .about-text {
     height: 400px;
   }
 }
