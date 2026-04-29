@@ -165,6 +165,8 @@ body {
 @media (max-width: 600px) {
   .page-header {
     padding-top: 6rem;
+    text-align: center;
+    margin-bottom: -40px;
   }
 
   .page-title {
