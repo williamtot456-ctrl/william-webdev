@@ -12,8 +12,7 @@
   align-items: center;
   justify-content: center;
   transition: 0.5s ease-in-out;
-  cursor: text;
-  z-index: 99999;
+  z-index: 11111;
 }
 .book-modal.is-open {
   opacity: 1;
@@ -31,14 +30,30 @@
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
   transform: translateY(-40px);
   overflow-y: auto;
+  overscroll-behavior: none;
   opacity: 0;
   transition:
     transform 0.4s ease,
     opacity 0.4s ease;
 }
+/* Animation */
 .book-modal.is-open .book-content {
   transform: translateY(0);
   opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.book-form-panel.hidden {
+  display: none !important;
 }
 /* Booking form "X" Close button */
 .modal-close {
@@ -54,6 +69,10 @@
   line-height: 1;
   cursor: pointer;
   z-index: 10;
+}
+/* NO SCROLL */
+.no-scroll-book {
+  overflow: hidden;
 }
 /* Booking Form Title */
 .book-content h2 {
@@ -144,13 +163,6 @@ label.full-width {
   background: rgb(138, 28, 28);
 }
 
-@media (max-width: 760px) {
-  .form-row,
-  .form-row.three-col {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Submit Modal */
 .book-submit-confirm {
   display: none;
@@ -158,23 +170,21 @@ label.full-width {
   inset: 0;
   align-items: center;
   justify-content: center;
-  margin-top: 24px;
   text-align: center;
-  transition: 0.5s ease-in-out;
 }
 .book-submit-confirm-content h1 {
-  font-size: 24px;
+  margin-top: 10px;
+  font-size: 23px;
   margin-bottom: 10px;
 }
 .book-submit-confirm-content p {
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0.7;
 }
 /* Submit Modal Box */
 .book-content.submitted {
   width: min(470px, 100%);
-  padding: 25px 35px;
-  height: 150px;
+  min-height: 150px;
   overflow: hidden;
 }
 /* Opening transition */
@@ -183,20 +193,67 @@ label.full-width {
   animation: fadeInUp 0.4s ease forwards;
 }
 
-/* Form Modal Closing transition */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+/* PHONE */
+@media (max-width: 768px) {
+  .form-row,
+  .form-row.three-col {
+    grid-template-columns: 1fr;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .book-content {
+    padding: 20px;
+    max-height: 80vh;
+  }
+  .book-content h2 {
+    font-size: 1.5rem;
+  }
+  .book-content p {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  .book-submit-confirm-content h1 {
+    font-size: 21px;
+  }
+  .book-content.submitted {
+    padding: 20px;
   }
 }
-.book-form-panel.hidden {
-  display: none !important;
-}
-.book-content.hidden {
-  display: none !important;
+
+/* SMALLER PHONES */
+@media (max-width: 480px) {
+  .book-content {
+    width: 95%;
+  }
+  .book-content h2 {
+    font-size: 1.3rem;
+  }
+  .book-content p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  .form-input,
+  .form-textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+  .book-submit {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+  .modal-close {
+    width: 32px;
+    height: 32px;
+    font-size: 1.7rem;
+    top: 12px;
+    right: 12px;
+  }
+  .book-submit-confirm-content h1 {
+    font-size: 18px;
+  }
+  .book-submit-confirm-content p {
+    font-size: 12px;
+  }
+  .book-content.submitted {
+    width: 90%;
+  }
 }
