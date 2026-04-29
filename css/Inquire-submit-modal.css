@@ -1,6 +1,5 @@
-/* Submit Modal Container */
+/* SUBMIT MODAL CONTAINER */
 .submit-modal {
-  font-family: Poppins, sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,70 +9,74 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
-  /* hidden by default */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease-in-out;
+  z-index: 11111;
 }
-/* Submit Modal Open */
+/* SUBMIT MODAL OPEN */
 .submit-modal.show {
   opacity: 1;
   pointer-events: auto;
 }
-/* Submit Contents inside */
+/* SUBMIT CONTENTS */
 .submit-content {
   background-color: #fff;
   width: 470px;
   max-width: 90%;
-  padding: 2rem;
   border-radius: 25px;
-  text-align: center;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 150px;
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 .submit-content h1 {
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
 .submit-content p {
-  font-size: 14px;
+  font-size: 18px;
   opacity: 0.7;
 }
-/* Submit "X" Close button */
+/* SUBMIT "X" CLOSE BTN */
 .submit-close {
   position: absolute;
-  top: 10px;
-  right: 8px;
-  width: 40px;
-  height: 40px;
+  top: 0.5rem;
+  right: 1.2rem;
   border: none;
-  background: transparent;
+  background: none;
   color: #333;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
   cursor: pointer;
 }
-/* Submit Flex Media Query */
+/* NO SCROLL */
+.no-scroll-submit {
+  overflow: hidden;
+}
+/* PHONE */
 @media (max-width: 600px) {
-  .submit-content {
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 15px;
-  }
-
   .submit-content h1 {
-    font-size: 20px;
+    font-size: 23px;
   }
-
   .submit-content p {
-    font-size: 13px;
+    font-size: 16px;
   }
+}
 
+/* SMALLER PHONES */
+@media (max-width: 480px) {
+  .submit-content h1 {
+    font-size: 21px;
+  }
+  .submit-content p {
+    font-size: 14px;
+  }
   .submit-close {
-    width: 30px;
-    height: 30px;
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
 }
