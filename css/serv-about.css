@@ -164,7 +164,7 @@ body {
   /* PHONE */
 @media (max-width: 600px) {
   .page-header {
-    padding-top: 2rem;
+    padding-top: 6rem;
   }
 
   .page-title {
