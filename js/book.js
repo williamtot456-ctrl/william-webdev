@@ -20,35 +20,39 @@ function bookModal() {
   )
     return;
 
-  // central reset
   function resetModal() {
     book_form_panel.classList.remove("hidden");
     book_submit_confirm.classList.remove("visible");
     book_content.classList.remove("submitted");
   }
 
-  // initial state
-  book_modal.classList.remove("is-open");
-  resetModal();
-
-  heroBook.addEventListener("click", () => {
-    book_modal.classList.add("is-open");
-    resetModal(); // prevents ghost state
-  });
-
-  book_close.addEventListener("click", () => {
+  function closeModal() {
     book_modal.classList.remove("is-open");
+    document.documentElement.classList.remove("no-scroll-book");
     setTimeout(() => {
       resetModal();
       book_form.reset();
     }, TRANSITION_TIME);
+  }
+
+  book_modal.classList.remove("is-open");
+  resetModal();
+
+  // OPEN MODAL
+  heroBook.addEventListener("click", () => {
+    book_modal.classList.add("is-open");
+    document.documentElement.classList.add("no-scroll-book");
+    resetModal();
   });
 
+  // CLOSE MODAL
+  book_close.addEventListener("click", closeModal);
+
+  // SUBMIT MODAL
   book_form.addEventListener("submit", (event) => {
     event.preventDefault();
     book_form_panel.classList.add("hidden");
     book_content.classList.add("submitted");
-
     book_submit_confirm.classList.add("visible");
   });
 }
