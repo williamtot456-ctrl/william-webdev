@@ -161,51 +161,35 @@ body {
 }
 
 
-  /* PHONE */
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
   .page-header {
-     padding-top: 2rem;
-    margin-top: 1rem;
+    padding-top: 5rem;
+    margin-bottom: -40px;
   }
-
-  .page-header {
-  text-align: center;
-  padding-top: 4rem;
-  margin-bottom: -40px;
-  margin-top: 2rem; /* ← dagdag mo ito */
-}
-
   .page-title {
     font-size: 1.4rem;
   }
-
   .section {
     padding: 2rem 1rem;
   }
-
   .grid-2 {
     grid-template-columns: 1fr;
   }
-
   #about-us {
     padding: 2rem 1rem;
   }
-
   .about-container {
     flex-direction: column;
     align-items: center;
   }
-
   .about-image img {
     max-width: 100%;
     height: 220px;
     object-fit: cover;
   }
-
   .about-text {
     height: auto;
   }
-
   .service-title {
     font-size: 1.4rem;
   }
