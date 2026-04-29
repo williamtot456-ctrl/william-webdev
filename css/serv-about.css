@@ -170,9 +170,8 @@ body {
 /* MOBILE */
 @media (max-width: 600px) {
   .page-header {
-    padding: 2rem 0;
-    margin: 1rem 0 2rem;
-    text-align: center;
+       padding: 1.5rem 0 1rem;
+    margin: 0;
   }
 
   .page-title {
@@ -180,11 +179,11 @@ body {
   }
 
   .section {
-    padding: 2rem 1rem;
+   padding: 2rem 1rem;
   }
 
   .services-section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem;
   }
 
   .grid-2 {
