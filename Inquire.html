@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/Inquire-form.css" />
     <link rel="stylesheet" href="css/Inquire-submit-modal.css" />
     <link rel="stylesheet" href="css/serv-about.css" />
     <script src="js/menu-bar.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEBDEV</title>
+    <title>Kastilyos Kitchen</title>
   </head>
   <body>
     <!-- NAVBAR FETCH-->
@@ -29,6 +29,7 @@
       }
       window.addEventListener("load", () => window.scrollTo(0, 0));
     </script>
+    <!-- INQUIRE FORM -->
     <section class="hero-inquire">
       <div class="inquire-wrap">
         <div class="content-inquire">
@@ -98,7 +99,7 @@
           <h1>Email</h1>
           <p>📩 castillohannafiyah14@gmail.com</p>
           <h1>Address</h1>
-          <p>📍151 aster loop st, antipolo valley, mambugan, antipolo city</p>
+          <p>📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City</p>
         </div>
 
         <div class="submit-modal" id="submit_modal">
@@ -108,7 +109,7 @@
             <p>We will get back to you soon.</p>
           </div>
         </div>
-        <!-- inquire modal js -->
+        <!-- INQUIRE MODAL JS -->
         <script>
           const submit = document.getElementById("submit");
           const submit_modal = document.getElementById("submit_modal");
@@ -117,16 +118,18 @@
 
           submit.addEventListener("click", (e) => {
             e.preventDefault();
-
             if (form.checkValidity()) {
               submit_modal.classList.add("show");
+              document.documentElement.classList.add("no-scroll-submit");
               form.reset();
             } else {
               form.reportValidity();
             }
           });
+
           submit_close.addEventListener("click", () => {
             submit_modal.classList.remove("show");
+            document.documentElement.classList.remove("no-scroll-submit");
           });
         </script>
       </div>
