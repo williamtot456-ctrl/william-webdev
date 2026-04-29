@@ -168,6 +168,13 @@ body {
     margin-top: 1rem;
   }
 
+  .page-header {
+  text-align: center;
+  padding-top: 4rem;
+  margin-bottom: -40px;
+  margin-top: 2rem; /* ← dagdag mo ito */
+}
+
   .page-title {
     font-size: 1.4rem;
   }
