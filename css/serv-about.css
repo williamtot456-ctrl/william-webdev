@@ -119,18 +119,6 @@ body {
 }
 
 /* FOOTER */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-} 
-
-@media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
 .footer {
   background: #292a30;
   padding: 60px 60px;
