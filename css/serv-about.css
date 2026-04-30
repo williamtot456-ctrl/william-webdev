@@ -118,7 +118,7 @@ body {
   background-color: #a00000;
 }
 
-/* FOOTER */
+/* FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 .footer {
   background: #292a30;
   padding: 60px 60px;
@@ -148,7 +148,7 @@ body {
 }
 .contact-item {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 16px;
   color: #e0e0e0;
 }
 .footer-bottom {
@@ -158,7 +158,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 18px;
 }
 /* TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -175,11 +175,11 @@ body {
     width: 160px;
   }
   .footer h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .footer p,
   .contact-item {
-    font-size: 13px;
+    font-size: 15px;
   }
   .footer-bottom {
     padding: 12px 30px;
@@ -208,12 +208,12 @@ body {
     margin: 0 auto 8px;
   }
   .footer h3 {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 8px;
   }
   .footer p,
   .contact-item {
-    font-size: 12px;
+    font-size: 20px;
     margin-bottom: 6px;
     line-height: 1.4;
   }
@@ -227,7 +227,7 @@ body {
     /* service us */
     
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .page-header {
        padding: 1.5rem 0 1rem;
     margin: 0;
@@ -308,7 +308,7 @@ body {
 }
 
 /* DESKTOP */
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .about-container {
     flex-direction: row;
     align-items: center;
