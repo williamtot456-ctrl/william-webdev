@@ -167,6 +167,23 @@ body {
   font-size: 14px;
 }
 
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+} 
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 15px;
+  }
+}
+
     /* service us */
     
 /* MOBILE */
