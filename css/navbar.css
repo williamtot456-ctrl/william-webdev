@@ -279,3 +279,12 @@ nav {
   }
 }
 
+/* HIDE LOGO NAME IN SMALLER SCREENS */
+@media (max-width: 360px) {
+  .logos .logoName {
+    display: none;
+  }
+  .logos .logoPipe {
+    display: none;
+  }
+}
