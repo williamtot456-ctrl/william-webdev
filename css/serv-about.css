@@ -161,7 +161,7 @@ body {
   font-size: 18px;
 }
 /* TABLET */
-@media(max-width: 940px) {
+@media (max-width: 940px) {
   .footer {
     flex-direction: column;
     padding: 25px 20px;
