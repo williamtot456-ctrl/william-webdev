@@ -1,60 +1,95 @@
-/* FOOD OPTIONS */
+/* MENUUUUUUUU */
 .food-options {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  background-color: #d3a972; /* Cream background para sa brand consistency */
 }
+
 .food-title {
-  font-size: 40px;
-  margin-bottom: 10px;
-  color: #000;
-  font-family: sans-serif, Verdana, Tahoma;
+  font-size: 50px;
+  color: #630d0d; /* Maroon color  */
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
+
 .food-title2 {
-  color: #000;
-  font-size: 18px;
-  max-width: 900px;
-  margin: 0 auto 30px;
-  font-family: sans-serif, Verdana, Tahoma;
+  color: #444;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
 }
+
+/* Menu Grid */
 .food-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
   margin: auto;
 }
+
+/* Cards */
 .food-column {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
+  background: #f5f5f5;
+  border-radius: 4px; 
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border-bottom: 5px solid #630d0d; /* Maroon color */
 }
+
+/* Image Container */
+.food-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*  img  */
+  transition: transform 0.5s ease;
+}
+
 .food-column:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
+
+.food-column:hover .food-image img {
+  transform: scale(1.1); /* hover zoom */
+}
+
+/* Menu h2*/
 .food-column h2 {
-  margin-bottom: 15px;
-  font-size: 25px;
-  color: #000;
-  border-bottom: 2px solid #f1f1f1;
-  padding-bottom: 5px;
-  font-weight: bold;
+  padding: 20px 0 10px;
+  color: #630d0d;
+  font-size: 26px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #d4af37; /* yellow line */
+  width: 80%;
+  margin: 0 auto 15px;
 }
+
 .food-column ul {
   list-style: none;
-  padding: 0;
+  padding: 0 20px 30px;
   margin: 0;
 }
+
 .food-column li {
-  padding: 6px 0;
-  font-size: 20px;
-  color: #444;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #555;
   border-bottom: 1px dashed #eee;
 }
+
 .food-column li:last-child {
   border-bottom: none;
 }
+
 
 /* MENU PACKAGE */
 .menu-section {
