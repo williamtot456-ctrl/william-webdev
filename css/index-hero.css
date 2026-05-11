@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 /* HERO SECTION */
 .hero {
   background-image: url("../imgs/hero-bg.png");
@@ -120,4 +125,17 @@
   }
 }
 
-
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content p {
+    font-size: 14px;
+  }
+  .hero-btn1,
+  .hero-btn2 {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
