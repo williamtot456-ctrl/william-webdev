@@ -56,3 +56,4 @@ function bookModal() {
     book_submit_confirm.classList.add("visible");
   });
 }
+bookModal();
