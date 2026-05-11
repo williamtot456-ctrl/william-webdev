@@ -45,13 +45,6 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-.content-inquire p {
-  margin-bottom: 1rem;
-  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
-  color: #000000;
-  font-family: "DM Serif Display", serif;
-}
-
 /* REACH US */
 .reach-us h1 {
   font-size: clamp(2rem, 5vw, 3.75rem);
@@ -103,7 +96,7 @@ form .user-details .input-box {
   font-weight: bold;
 }
 
-/* FN TO PN INPUT FIELD */
+/*INPUT FIELD exclude msg since its a textarea */
 .user-details .input-box input {
   height: 50px;
   width: 100%;
@@ -115,18 +108,12 @@ form .user-details .input-box {
   border: 1px solid #000;
   box-sizing: border-box;
 }
-
-/* INQ & MSG INPUT BOX LABEL*/
-.user-details .Inq-tit,
-.user-details.Msg-tit {
-  display: block;
-  font-size: 0.88rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* INQ Event details select box */
+.Inq-event {
+  width: calc(33.33% - 12px) !important;
 }
 
-/* INQUIRE INPUT BOX */
-.user-details .Inq-box input {
+.Inq-event select {
   height: 50px;
   width: 100%;
   outline: none;
@@ -136,20 +123,8 @@ form .user-details .input-box {
   border: 1px solid #000;
   transition: all 0.3s ease;
   box-sizing: border-box;
-}
-
-/* MESSAGE INPUT BOX */
-.user-details .Msg-box textarea {
-  height: 135px;
-  width: 100%;
-  outline: none;
-  font-size: 0.95rem;
-  border-radius: 14px;
-  padding: 13px 15px;
-  border: 1px solid #000;
-  transition: all 0.3s ease;
-  resize: vertical;
-  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 /* INQUIRY DIV */
@@ -164,11 +139,33 @@ form .user-details .input-box {
   width: 100%;
   box-sizing: border-box;
 }
+/* INQUIRY INPUT BOX OVERIDE*/
+.Inq-box {
+  width: 100% !important;
+}
+/* MESSAGE INPUT BOX */
+.user-details .Msg-box textarea {
+  height: 135px;
+  width: 100%;
+  font-size: 0.95rem;
+  outline: none;
+  border-radius: 14px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+/* MSG INPUT BOX OVERRIDE */
+.Msg-box {
+  width: 100% !important;
+}
 
 /* INPUT BOX FOCUS */
 .user-details .input-box input:focus,
 .user-details .Inq-box input:focus,
-.user-details .Msg-box textarea:focus {
+.user-details .Msg-box textarea:focus,
+.Inq-event select:focus {
   border-color: rgb(80, 10, 10);
   border-width: 2px;
 }
@@ -202,9 +199,49 @@ form .submit input {
 form .submit input:hover {
   background: rgb(138, 28, 28);
 }
+/* ERROR MESSAGES */
+.Inq-error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+/* inquire hero*/
+.Inq-page {
+  width: 100%;
+  height: 65vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../imgs/pack1.jpg"); /* bg pic */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Inq-header {
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* INQUIRE H1 & P */
+.Inq-header h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #ffffff;
+  font-family: "DM Serif Display", serif;
+}
+
+.Inq-header p {
+  margin-bottom: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  color: #ffffff;
+  font-family: "DM Serif Display", serif;
+}
 
 /* TABLET */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .hero-inquire {
     padding: 2rem;
     padding-top: calc(80px + 2rem) !important;
@@ -249,6 +286,9 @@ form .submit input:hover {
   .form-container {
     margin-top: 2rem;
   }
+  .Inq-event {
+    width: 100% !important;
+  }
 }
 /* SMALLER PHONES */
 @media (max-width: 480px) {
@@ -262,12 +302,13 @@ form .submit input:hover {
   }
   /* H1 and P */
   .content-inquire h1,
+  .Inq-page h1,
   .reach-us h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.3rem;
   }
-  .content-inquire p {
-    font-size: 1rem;
+  .Inq-header p {
+    font-size: 0.8rem;
     margin-bottom: 1em;
   }
   .reach-us p {
