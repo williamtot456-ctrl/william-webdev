@@ -212,7 +212,7 @@ form .submit input:hover {
   height: 65vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../imgs/pack1.jpg"); /* bg pic */
+    url("../img/pack1.jpg"); /* bg pic */
   background-size: cover;
   background-position: center;
   display: flex;
