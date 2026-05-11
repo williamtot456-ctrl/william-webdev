@@ -13,26 +13,63 @@
     <title>Kastilyos Kitchen</title>
   </head>
   <body>
-    <!-- NAVBAR FETCH-->
-    <div id="navbar-container"></div>
-    <script>
-      fetch("navbar.html")
-        .then((res) => res.text())
-        .then((data) => {
-          const container = document.getElementById("navbar-container");
-          container.innerHTML = data;
+<!-- NAVBAR -->
+    <nav id="navbar">
+      <!--LOGO-->
+      <div class="logos">
+        <a href="Index.html">
+          <img class="logo" src="imgs/nav-logo.png" alt="LOGO" />
+        </a>
+        <span class="logoPipe">|</span>
+        <a href="Index.html" style="text-decoration: none">
+          <h1 class="logoName">KASTILYOS KITCHEN</h1>
+        </a>
+      </div>
+      <!--Nav Links-->
+      <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Index.html">About</a></li>
+        <li><a href="Index.html">Services</a></li>
+        <li><a href="Index.html">Menu</a></li>
+        <li><a href="Index.html">Packages</a></li>
+        <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
+      </ul>
+      <!--Burger-->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <!--Sidebar-->
+      <div class="sidebar" id="sidebar">
+        <!--Close button-->
+        <button class="side-close" id="side-close">&times;</button>
+        <!--Sidebar LOGO-->
+        <div class="sidebar-logo">
+          <a href="Index.html">
+            <img class="logo" src="imgs/nav-logo.png" alt="LOGO" />
+          </a>
+          <span class="logoPipe">|</span>
+          <a href="Index.html" style="text-decoration: none">
+            <h1 class="logoName">KASTILYOS KITCHEN</h1>
+          </a>
+        </div>
+        <!--Sidebar Links-->
+        <ul class="sidebar-links">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Index.html">About Us</a></li>
+          <li><a href="Index.html">Services</a></li>
+          <li><a href="Index.html">Menu</a></li>
+          <li><a href="Index.html">Packages</a></li>
+          <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
+        </ul>
+        <div class="sidebar-contact">
+          <h1>PHONE</h1>
+          <p>📞 09686026736 | 09214212687</p>
+          <h1>EMAIL</h1>
+          <p>📩 castillohannafiyah14@gmail.com</p>
+          <h1>ADDRESS</h1>
+          <p>📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City</p>
+        </div>
+      </div>
+    </nav>
 
-          bookModal();
-          hamburgerMenu();
-        });
-    </script>
-    <!-- Scroll fix-->
-    <script>
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
-      window.addEventListener("load", () => window.scrollTo(0, 0));
-    </script>
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-content">
@@ -40,7 +77,7 @@
         <p>Experience traditional flavors with a modern twist.</p>
         <div class="hero-btns">
           <button class="hero-btn1" id="hero_book">Book now</button>
-          <a href="index.html" class="hero-btn2">View Our Services →</a>
+          <a href="Index.html" class="hero-btn2">View Our Services →</a>
         </div>
       </div>
     </section>
@@ -65,7 +102,6 @@
                   name="firstName"
                   placeholder="Enter Your First Name"
                   required
-                  autofocus
                 />
               </label>
               <label>
@@ -426,5 +462,7 @@
         <div>&copy; ALL RIGHTS RESERVED | KASTILYOS KITCHEN 2025</div>
       </div>
     </footer>
+    <script src="js/book.js"></script>
+    <script src="js/menu-bar.js"></script>
   </body>
 </html>
