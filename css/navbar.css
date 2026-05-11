@@ -127,7 +127,6 @@ nav {
   /* No scroll Sidebar */
   .no-scroll {
     overflow: hidden;
-    height: 100vh;
   }
 
   .sidebar::-webkit-scrollbar {
