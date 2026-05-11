@@ -19,5 +19,11 @@ function hamburgerMenu() {
         document.body.classList.remove("no-scroll");
       });
     });
+    history.scrollRestoration = "manual";
+
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
   }
 }
+hamburgerMenu();
