@@ -113,16 +113,16 @@ function validateEmail() {
 function validatePhone() {
   const input = document.getElementById("Inq-phone");
   const error = document.getElementById("phoneError");
-  let value = input.value.trim();
-  // start with 09 or +639 and must be 9 or 13 digits
-  const phonePattern = /^(09\d{9}|(\+63)9\d{9})$/;
+  const value = input.value.trim();
+
+  // Only accept 09XXXXXXXXX format
+  const phonePattern = /^09\d{9}$/;
 
   if (value.length === 0) {
     error.textContent = "";
     return false;
   } else if (!phonePattern.test(value)) {
-    error.textContent =
-      "Enter a valid PH number (e.g. 09XXXXXXXXX or +639XXXXXXXXX).";
+    error.textContent = "Enter a valid PH number (e.g. 09XXXXXXXXX).";
     return false;
   } else {
     error.textContent = "";
@@ -153,8 +153,8 @@ email.addEventListener("input", function () {
 });
 
 phone.addEventListener("input", function () {
-  this.value = this.value.replace(/[^\d+]/g, "");
-  this.value = this.value.replace(/(?!^)\+/g, "");
+  this.value = this.value.replace(/[^\d]/g, "");
+  if (this.value.length > 11) this.value = this.value.slice(0, 11);
   validatePhone();
 });
 
