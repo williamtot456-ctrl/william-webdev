@@ -160,7 +160,7 @@ phone.addEventListener("input", function () {
 
 // Guest
 document.getElementById("Inq-guest").addEventListener("input", function () {
-  if (this.value > 50) this.value = 50;
+  if (this.value > 150) this.value = 150;
 });
 
 document.getElementById("Inq-guest").addEventListener("blur", function () {
