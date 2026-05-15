@@ -1,0 +1,344 @@
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* service hero*/
+.Serv-page {
+  width: 100%;
+  height: 65vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../imgs/pack1.jpg"); /* bg pic */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Serv-header {
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* SERVICE H1 & P */
+.Serv-header h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #ffffff;
+  font-family: "DM Serif Display", serif;
+}
+
+.Serv-header p {
+  margin-bottom: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  color: #ffffff;
+  font-family: "DM Serif Display", serif;
+}
+
+.serv-tit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.serv-tit h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #5a1414;
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 10px;
+}
+
+.serv-tit p {
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  color: #000000;
+  font-family: "DM Serif Display", serif;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* SERVICES GRID */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  flex: 1 1 calc(33.33% - 25px);
+  border: 1px solid rgba(107, 40, 40, 0.12);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s ease;
+}
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* CARD TITLE */
+.card h3 {
+  margin: 0;
+  color: #5a1414;
+  font-size: 28px;
+  font-family: "DM Serif Display", serif;
+}
+
+/* CARD TEXT */
+.card p {
+  margin: 0;
+  color: #5f5f5f;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  background: #5a1414;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+  background: #6b2828;
+  transform: translateY(-2px);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+  width: min(100%, 560px);
+  max-height: min(90vh, 900px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: clamp(1.2rem, 3vw, 1.75rem);
+  text-align: center;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* MODAL TITLE */
+.modal-content h2 {
+  margin: 0.25rem 0 0;
+  color: #5a1414;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1.15;
+}
+
+/* MODAL IMAGE */
+.modal-content img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin: 0.9rem 0 0.35rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* MODAL TEXT */
+#modal-text {
+  margin: 0;
+  color: #5f5f5f;
+  text-align: left;
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+
+/* CLOSE BUTTON */
+.close {
+  align-self: flex-end;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  outline: none;
+  border: none;
+  border-radius: 999px;
+  background: rgba(90, 20, 20, 0.08);
+  color: #5a1414;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* CLOSE BUTTON HOVER */
+.close:hover {
+  transform: rotate(90deg);
+  background: rgba(90, 20, 20, 0.14);
+  color: #6b2828;
+}
+
+/* FOOTER */
+.footer {
+  background: #292a30;
+  padding: 60px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+.footer-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.footer p {
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding-left: 1px;
+  color: #e0e0e0;
+}
+.contact-item {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #e0e0e0;
+}
+.footer-bottom {
+  background: #525050;
+  color: #fff;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+/* TABLET */
+@media (max-width: 940px) {
+  .footer {
+    flex-direction: column;
+    padding: 25px 20px;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .footer-col {
+    min-width: 100%;
+    margin: 5px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer-col:last-child {
+    border-bottom: none;
+  }
+  .footer-logo {
+    width: 100px;
+    margin: 0 auto 8px;
+  }
+  .footer h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .footer p,
+  .contact-item {
+    font-size: 20px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    padding: 10px 15px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .modal-content h2 {
+    font-size: 28px;
+  }
+}
+
+/* SMALLER MOBILE */
+@media (max-width: 480px) {
+  .footer h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .footer p,
+  .contact-item {
+    font-size: 12px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .Serv-page h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+  .Serv-header p {
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+  }
+  .card {
+    flex: 1 1 calc(100%);
+  }
+  .card h3,
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  .serv-tit h1 {
+    font-size: 1.5rem;
+  }
+  .serv-tit p {
+    font-size: 1rem;
+  }
+}
