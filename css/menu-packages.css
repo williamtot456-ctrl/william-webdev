@@ -182,6 +182,8 @@ body {
   background: #8b0000;
   padding: 8px 15px;
   border-radius: 6px;
+  outline: none;
+  border: none;
 }
 
 /* PACKAGE SECTION */
