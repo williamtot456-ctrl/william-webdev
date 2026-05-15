@@ -143,74 +143,67 @@ body {
 
 /* MODAL CONTENT */
 .modal-content {
-  width: min(100%, 560px);
-  max-height: min(90vh, 900px);
-  overflow: auto;
+  width: min(90%, 560px);
+  max-height: 85vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: clamp(1.2rem, 3vw, 1.75rem);
-  text-align: center;
+  gap: 0.5rem;
+  padding: clamp(1rem, 4vw, 1.75rem);
   background: #ffffff;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* CLOSE BUTTON */
+.close {
+  align-self: flex-end;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: rgba(90, 20, 20, 0.08);
+  color: #5a1414;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.close:hover {
+  background: rgba(90, 20, 20, 0.15);
+  transform: rotate(90deg);
 }
 
 /* MODAL TITLE */
 .modal-content h2 {
-  margin: 0.25rem 0 0;
+  margin: 0;
   color: #5a1414;
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
-  line-height: 1.15;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  line-height: 1.2;
+  text-align: center;
 }
 
 /* MODAL IMAGE */
 .modal-content img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin: 0.9rem 0 0.35rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  flex-shrink: 0;
 }
 
 /* MODAL TEXT */
 #modal-text {
   margin: 0;
   color: #5f5f5f;
-  text-align: left;
+  font-size: clamp(0.875rem, 2vw, 0.98rem);
   line-height: 1.75;
-  font-size: 0.98rem;
-}
-
-/* CLOSE BUTTON */
-.close {
-  align-self: flex-end;
-  width: 2.4rem;
-  height: 2.4rem;
-  display: inline-grid;
-  place-items: center;
-  outline: none;
-  border: none;
-  border-radius: 999px;
-  background: rgba(90, 20, 20, 0.08);
-  color: #5a1414;
-  font-size: 1.7rem;
-  line-height: 1;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-/* CLOSE BUTTON HOVER */
-.close:hover {
-  transform: rotate(90deg);
-  background: rgba(90, 20, 20, 0.14);
-  color: #6b2828;
+  text-align: left;
 }
 
 /* FOOTER */
@@ -298,13 +291,30 @@ body {
   .card {
     flex: 1 1 calc(50% - 20px);
   }
-
   .card h3 {
     font-size: 24px;
   }
-
+  .modal-content {
+    width: min(94%, 560px);
+    max-height: 80vh;
+    gap: 0.4rem;
+    border-radius: 20px;
+  }
   .modal-content h2 {
-    font-size: 28px;
+    font-size: 1.5rem;
+  }
+  .modal-content img {
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+  }
+  #modal-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .close {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -340,5 +350,30 @@ body {
   }
   .serv-tit p {
     font-size: 1rem;
+  }
+  .modal {
+    padding: 0.75rem;
+  }
+  .modal-content {
+    width: 100%;
+    max-height: 82vh;
+    gap: 0.35rem;
+    border-radius: 16px;
+  }
+  .modal-content h2 {
+    font-size: 1.25rem;
+  }
+  .modal-content img {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+  }
+  #modal-text {
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+  .close {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.3rem;
   }
 }
