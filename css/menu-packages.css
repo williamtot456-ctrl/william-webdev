@@ -34,6 +34,12 @@ body {
   color: #ffffff;
   font-family: "DM Serif Display", serif;
 }
+.hero-divider {
+  width: 100px;
+  height: 4px;
+  background: #d4af37;
+  margin: 20px auto;
+}
 
 
 /* menu start */
