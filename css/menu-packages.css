@@ -1,4 +1,4 @@
-/* --- MENU HERO SECTION --- */
+/*  MENU HEROOO*/
 .menu-hero {
     width: 100%;
     height: 65vh; 
@@ -95,7 +95,7 @@
   transform: scale(1.1); /* hover zoom */
 }
 
-/* Menu Typography */
+/* Menu H2 N TEXT */
 .food-column h2 {
   padding: 20px 0 10px;
   color: #630d0d;
@@ -182,8 +182,6 @@
   font-size: 55px;
   margin-bottom: 20px;
 }
-
-
 
 /* GALLERY */
 .gallery {
@@ -297,7 +295,7 @@
   }
 }
 
-/* LIGHTBOX */
+/* Package design */
 .lightbox {
     display: none;
     position: fixed;
@@ -322,7 +320,7 @@
     border-radius: 8px;
     animation: zoomIn 0.3s ease;
 }
-
+/* zoom */
 @keyframes zoomIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
@@ -367,7 +365,7 @@
     right: 1rem;
 }
 
-/* pointer sa gallery images */
+/* pointer sa imgs */
 .gallery img {
     cursor: pointer;
 }
