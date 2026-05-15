@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/serv.css" />
+    <title>Kastilyos Kitchen</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <!-- LOGO -->
+      <div class="logos">
+        <a href="index.html">
+          <img class="logo" src="imgs/nav-logo.png" alt="LOGO" />
+        </a>
+
+        <span class="logoPipe">|</span>
+
+        <a href="index.html" style="text-decoration: none">
+          <h1 class="logoName">KASTILYOS KITCHEN</h1>
+        </a>
+      </div>
+
+      <!-- NAV LINKS -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="index.html">Packages</a></li>
+        <li><a href="Inquire.html">Inquire</a></li>
+      </ul>
+
+      <!-- BURGER -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <button class="side-close" id="side-close">&times;</button>
+
+        <div class="sidebar-logo">
+          <a href="index.html">
+            <img class="logo" src="imgs/nav-logo.png" alt="LOGO" />
+          </a>
+
+          <span class="logoPipe">|</span>
+
+          <a href="index.html" style="text-decoration: none">
+            <h1 class="logoName">KASTILYOS KITCHEN</h1>
+          </a>
+        </div>
+
+        <ul class="sidebar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="index.html">Menu</a></li>
+          <li><a href="index.html">Packages</a></li>
+          <li><a href="Inquire.html">Inquire</a></li>
+        </ul>
+
+        <div class="sidebar-contact">
+          <h1>PHONE</h1>
+          <p>📞 09686026736 | 09214212687</p>
+
+          <h1>EMAIL</h1>
+          <p>📩 castillohannafiyah14@gmail.com</p>
+
+          <h1>ADDRESS</h1>
+          <p>📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="Serv-page">
+      <div class="Serv-header">
+        <h1>Our Catering Services</h1>
+        <p>
+          Discover elegant catering experiences designed for weddings,
+          birthdays, corporate events, and unforgettable celebrations.
+        </p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="container">
+      <div class="services">
+        <!-- CARD -->
+        <div class="card">
+          <h3>Wedding Catering</h3>
+
+          <p>
+            Elegant wedding catering with beautiful presented dishes and a
+            romantic setup designed to make your special day unforgettable,
+            filled with love, style, and delicious moments shared with family
+            and friends.
+          </p>
+
+          <button class="btn" onclick="showDetails('wedding')">
+            View Details
+          </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="card">
+          <h3>Corporate Events</h3>
+
+          <p>
+            Professional catering for meetings and events, serving well-prepared
+            meals with a clean, elegant setup that keeps your business
+            gatherings smooth and impressive.
+          </p>
+
+          <button class="btn" onclick="showDetails('corporate')">
+            View Details
+          </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="card">
+          <h3>Birthday Parties</h3>
+
+          <p>
+            Make every birthday extra special with fun, delicious food and a
+            vibrant setup that brings joy, color, and celebration to your big
+            day.
+          </p>
+
+          <button class="btn" onclick="showDetails('birthday')">
+            View Details
+          </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="card">
+          <h3>Buffet Setup</h3>
+
+          <p>
+            Make every birthday extra special with fun, delicious food and a
+            vibrant setup that brings joy, color, and celebration to your big
+            day.
+          </p>
+
+          <button class="btn" onclick="showDetails('buffet')">
+            View Details
+          </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="card">
+          <h3>Baptism</h3>
+
+          <p>
+            A heartfelt celebration of new beginnings, made extra special with
+            beautiful prepared food and a warm, elegant setup for family and
+            friends.
+          </p>
+
+          <button class="btn" onclick="showDetails('styling')">
+            View Details
+          </button>
+        </div>
+
+        <!-- CARD -->
+        <div class="card">
+          <h3>Anniversary</h3>
+
+          <p>
+            Celebrating love that lasts through time with a romantic dining
+            experience, delicious food, and an elegant setup made for
+            unforgettable memories.
+          </p>
+
+          <button class="btn" onclick="showDetails('custom')">
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal()">&times;</button>
+
+        <h2 id="modal-title"></h2>
+
+        <img id="modal-img" src="" alt="" />
+
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer">
+        <div class="footer-col">
+          <img src="imgs/footer-logo.jpg" alt="Logo" class="footer-logo" />
+
+          <p>
+            We specialize in catering services and bulk food orders, bringing
+            the heart and soul of traditional Filipino cuisine from our kitchen
+            to your table.
+          </p>
+
+          <p>Serving up lutong bahay classics for every occasion!</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Reach Us</h3>
+
+          <div class="contact-item">
+            📍 151 Aster Loop St, Antipolo Valley, Mambugan, Antipolo City
+          </div>
+
+          <div class="contact-item">📞 0968 602 6736 | 0921 421 2687</div>
+
+          <div class="contact-item">📩 castillohannafiyah14@gmail.com</div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Types of Events We Cater</h3>
+
+          <p>✓ Weddings</p>
+          <p>✓ Birthday Parties</p>
+          <p>✓ Corporate Events</p>
+          <p>✓ Debuts and Anniversaries</p>
+          <p>✓ Baptisms</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; ALL RIGHTS RESERVED | KASTILYOS KITCHEN 2025</div>
+      </div>
+    </footer>
+    <script>
+      const data = {
+        wedding: {
+          title: "Wedding Catering",
+          text: "Our wedding catering service offers a perfect blend of exquisite cuisine and elegant setup to make your special day truly unforgettable. From carefully curated menus featuring a variety of local and international dishes to beautifully styled buffet tables or plated dining arrangements, every detail is thoughtfully designed to match your theme and preferences. We provide professional food presentation, stylish table settings, and coordinated decor that enhance the overall ambiance of your celebration.",
+          img: "imgs/wed-img6.jpg",
+        },
+
+        corporate: {
+          title: "Corporate Events",
+          text: "We provide reliable and sophisticated catering services for corporate events, meetings, seminars, product launches, and company celebrations. Our team ensures elegant food presentation, organized buffet setups, and quality service that reflects professionalism and excellence. With carefully prepared menus and attention to detail, we help create successful events that leave a lasting impression.",
+          img: "imgs/corpo.jpg",
+        },
+
+        birthday: {
+          title: "Birthday Parties",
+          text: "Our birthday catering service brings fun, flavor, and elegance to every celebration. From themed decorations and stylish buffet arrangements to freshly prepared dishes that guests of all ages will enjoy, we make every birthday extra special. Whether it’s a children’s party, debut, or intimate family gathering, we create a warm and festive atmosphere that makes every moment memorable.",
+          img: "imgs/birthday.jpg",
+        },
+
+        buffet: {
+          title: "Buffet Setup",
+          text: "Our buffet catering service combines flavorful cuisine with visually appealing presentation to create an exceptional dining experience. We carefully arrange every table with elegance and organization, ensuring guests can enjoy a wide variety of dishes comfortably and conveniently. Perfect for weddings, birthdays, corporate events, and special occasions, our buffet setups add sophistication and satisfaction to every celebration.",
+          img: "imgs/buff.jpg",
+        },
+
+        styling: {
+          title: "Baptism",
+          text: "Our baptism catering service is designed to create a peaceful and joyful celebration for families and loved ones. We offer elegant table arrangements, delicious meals, and beautifully styled setups that perfectly match the significance of the occasion. From intimate gatherings to larger celebrations, we help make this sacred milestone truly meaningful and memorable.",
+          img: "imgs/bap.jpg",
+        },
+
+        custom: {
+          title: "Anniversaries",
+          text: "Our anniversary catering service is designed to create a romantic and elegant atmosphere perfect for celebrating love and lasting memories. From beautifully styled buffet tables and sophisticated decorations to carefully prepared dishes that delight every guest, we ensure every detail adds charm and meaning to the occasion. Whether it’s an intimate family celebration or a grand anniversary event, our catering setup brings comfort, elegance, and unforgettable dining experiences to your special day.",
+          img: "imgs/anniv.jpg",
+        },
+      };
+
+      function showDetails(type) {
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalText = document.getElementById("modal-text");
+        const modalImg = document.getElementById("modal-img");
+
+        const selected = data[type];
+
+        modalTitle.innerText = selected.title;
+        modalText.innerText = selected.text;
+        modalImg.src = selected.img;
+        modalImg.alt = `${selected.title} catering image`;
+
+        modal.style.display = "flex";
+        modal.setAttribute("aria-hidden", "false");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("modal");
+
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      window.onclick = function (e) {
+        const modal = document.getElementById("modal");
+
+        if (e.target == modal) {
+          closeModal();
+        }
+      };
+    </script>
+
+    <!-- NAVBAR SCRIPT -->
+    <script src="js/menu-bar.js"></script>
+  </body>
+</html>
