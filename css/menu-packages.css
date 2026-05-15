@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(219, 213, 213);
+}
 /*  MENU HEROOO*/
 .menu-hero {
     width: 100%;
@@ -35,7 +38,6 @@
 .food-options {
   padding: 80px 20px;
   text-align: center;
- background-color: rgb(116, 115, 115);
 }
 
 .food-title {
