@@ -11,37 +11,37 @@
 <body>
     <nav id="navbar">
         <div class="logos">
-            <a href="/"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
+            <a href="index.html"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
             <span class="logoPipe">|</span>
-            <a href="/" style="text-decoration: none">
+            <a href="index.html" style="text-decoration: none">
                 <h1 class="logoName">KASTILYOS KITCHEN</h1>
             </a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Services</a></li>
+            <li><a href="service.html">Services</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="package.html">Packages</a></li>
-            <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
+            <li><a href="Inquire.html">Inquire</a></li>
         </ul>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <div class="sidebar" id="sidebar">
             <button class="side-close" id="side-close">&times;</button>
             <div class="sidebar-logo">
-                <a href="/"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
+                <a href="index.html"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
                 <span class="logoPipe">|</span>
-                <a href="/" style="text-decoration: none">
+                <a href="index.html" style="text-decoration: none">
                     <h1 class="logoName">KASTILYOS KITCHEN</h1>
                 </a>
             </div>
             <ul class="sidebar-links">
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="/">About Us</a></li>
-                <li><a href="/">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="service">Services</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="package.html">Packages</a></li>
-                <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
+                <li><a href="Inquire.html">Inquire</a></li>
             </ul>
             <div class="sidebar-contact">
                 <h1>PHONE</h1>
@@ -118,11 +118,6 @@
         </div>
     </footer>
 
-    <script src="js/menu-bar.js"></script>
-    <script>
-        hamburgerMenu();
-    </script>
-
     <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightbox-close">&times;</button>
@@ -131,10 +126,7 @@
     <button class="lightbox-next" id="lightbox-next">&#10095;</button>
 </div>
 
-<script src="js/menu-bar.js"></script>
-<script>
-    hamburgerMenu();
-</script>
+<!-- Pic slides-->
 <script>
     const images = document.querySelectorAll('.gallery img');
     const lightbox = document.getElementById('lightbox');
@@ -175,5 +167,7 @@
         }
     });
 </script>
+    <!-- Hamburger -->
+    <script src="js/menu-bar.js"></script>
 </body>
 </html>
