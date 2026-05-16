@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/menu-packages.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <title>Kastilyos Kitchen</title>
+    <link rel="stylesheet" href="css/serv-about.css">
 </head>
 <body>
     <nav id="navbar">
         <div class="logos">
-            <a href="index.html"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
+            <a href="/"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
             <span class="logoPipe">|</span>
-            <a href="index.html" style="text-decoration: none">
+            <a href="/" style="text-decoration: none">
                 <h1 class="logoName">KASTILYOS KITCHEN</h1>
             </a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li><a href="index.html">Services</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="package.html">Packages</a></li>
-            <li><a href="Inquire.html">Inquire</a></li>
+            <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
         </ul>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <div class="sidebar" id="sidebar">
             <button class="side-close" id="side-close">&times;</button>
             <div class="sidebar-logo">
-                <a href="index.html"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
+                <a href="/"> <img class="logo" src="imgs/nav-logo.png" alt="LOGO" /> </a>
                 <span class="logoPipe">|</span>
-                <a href="index.html" style="text-decoration: none">
+                <a href="/" style="text-decoration: none">
                     <h1 class="logoName">KASTILYOS KITCHEN</h1>
                 </a>
             </div>
             <ul class="sidebar-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">About Us</a></li>
-                <li><a href="service">Services</a></li>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/">Services</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="package.html">Packages</a></li>
-                <li><a href="Inquire.html">Inquire</a></li>
+                <li><a href="Inquire.html" class="Inquire">Inquire</a></li>
             </ul>
             <div class="sidebar-contact">
                 <h1>PHONE</h1>
@@ -53,22 +54,78 @@
         </div>
     </nav>
 
-   <!-- Menu-Pack-header -->
-      <div class="Menu-Pack-page">
-        <div class="Menu-Pack-header">
-          <h1>Our Packages</h1>
-          <p>
-            We specialize in catering services and bulk food orders, bringing
-            the heart and soul of traditional Filipino cuisine from our kitchen
-            to your table🍴
-          </p>
-          <div class="hero-divider"></div>
+    <div class="menu-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>PACKAGE</h1>
+                <p>We specialize in catering services and bulk food orders, bringing the heart and soul of traditional
+                    Filipino cuisine from our kitchen to your table🍴</p>
+                <div class="hero-divider"></div>
+            </div>
         </div>
-      </div>  
+    </div>  
 
     <!-- Packed Meals -->
     <section id="packed-meals">
         <h2>Food Trays & <span>Packed Meal</span> Packages</h2>
+        <!-- PACKAGE CARDS -->
+<section class="menu-section">
+    <div class="menu-container">
+
+        <!-- PACKAGE A -->
+        <div class="menu-content">
+            <h2>PACKAGE A</h2>
+            <ul>
+                <li>✔ Beef</li>
+                <li>✔ Pork</li>
+                <li>✔ Chicken</li>
+                <li>✔ Seafood</li>
+                <li>✔ Pasta and Veggies</li>
+                <li>✔ Rice</li>
+            </ul>
+            <button class="price">Php 400/head</button>
+        </div>
+
+        <!-- PACKAGE B -->
+        <div class="menu-content">
+            <h2>PACKAGE B</h2>
+            <ul>
+                <li>✔ Beef</li>
+                <li>✔ Pork</li>
+                <li>✔ Chicken</li>
+                <li>✔ Seafood</li>
+                <li>✔ Pasta or Veggies</li>
+                <li>✔ Rice</li>
+            </ul>
+            <button class="price">Php 330/head</button>
+        </div>
+
+        <!-- PACKAGE C -->
+        <div class="menu-content">
+            <h2>PACKAGE C</h2>
+            <ul>
+                <li>✔ Beef</li>
+                <li>✔ Pork</li>
+                <li>✔ Chicken</li>
+                <li>✔ Rice</li>
+            </ul>
+            <button class="price">Php 290/head</button>
+        </div>
+
+        <!-- PACKAGE D -->
+        <div class="menu-content">
+            <h2>PACKAGE D</h2>
+            <ul>
+                 <li>✔ Beef</li>
+                <li>✔ Pork</li>
+                <li>✔ Chicken</li>
+                <li>✔ Seafood</li>
+                <li>✔ Pasta and Veggies</li>
+            </ul>
+            <button class="price">Php 380/head</button>
+        </div>
+    </div>
+</section>
         <div class="gallery">
             <img src="img/pack1.jpg" alt="pack" />
             <img src="img/pack2.jpg" alt="" />
@@ -119,6 +176,11 @@
         </div>
     </footer>
 
+    <script src="js/menu-bar.js"></script>
+    <script>
+        hamburgerMenu();
+    </script>
+
     <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightbox-close">&times;</button>
@@ -127,7 +189,10 @@
     <button class="lightbox-next" id="lightbox-next">&#10095;</button>
 </div>
 
-<!-- Pic slides-->
+<script src="js/menu-bar.js"></script>
+<script>
+    hamburgerMenu();
+</script>
 <script>
     const images = document.querySelectorAll('.gallery img');
     const lightbox = document.getElementById('lightbox');
@@ -168,7 +233,5 @@
         }
     });
 </script>
-    <!-- Hamburger -->
-    <script src="js/menu-bar.js"></script>
 </body>
 </html>
