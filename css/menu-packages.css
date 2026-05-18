@@ -50,7 +50,7 @@ body {
 }
 
 .food-title {
-font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: 50px;
   color: #5a1414;
   font-family: "DM Serif Display", serif;
   text-transform: uppercase;
