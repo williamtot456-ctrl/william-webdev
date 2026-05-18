@@ -5,7 +5,7 @@ body {
 }
 /* HERO SECTION */
 .hero-inquire {
-  background-color: rgb(219, 213, 213);
+  background-color: #f5f1f1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
