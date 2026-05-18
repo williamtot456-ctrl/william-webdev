@@ -1,22 +1,210 @@
-/* about.css */
+/* ABOUT US SECTION IN INDEX*/
+#about-us {
+  padding: 5rem 8%;
+  background-color: #f5f1f1;
+}
+
+/* CONTAINER */
+.abt-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SECTION TITLE */
+.abt-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #5a1414;
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.abt-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #800000;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 5px;
+}
+
+/* CARD */
+.abts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.abt-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.abt-image img {
+  width: 100%;
+  max-width: 380px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* TEXT */
+.about-text {
+  flex: 1.2;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #800000;
+  margin-bottom: 1.2rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.learn-more {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background: #800000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+  background: #a00000;
+  transform: translateY(-2px);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  #about-us {
+    padding: 4rem 5%;
+  }
+
+  .abts-container {
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+
+  .abt-image img {
+    max-width: 320px;
+    height: 360px;
+  }
+
+  .about-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #about-us {
+    padding: 3rem 1.2rem;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .abts-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .abt-image img {
+    max-width: 100%;
+    height: 280px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .learn-more {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .abt-image img {
+    height: 230px;
+  }
+
+  .learn-more {
+    width: 100%;
+    max-width: 220px;
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------------------- */
+
+/* About Page */
 html,
 body {
   overflow-x: hidden;
   max-width: 100%;
 }
+
 /* ABout us*/
 .About-page {
   width: 100%;
   height: 65vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../imgs/pack1.jpg"); /* bg pic */
+    url("../imgs/pack1.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .About-header {
   text-align: center;
   color: #fff;
@@ -197,7 +385,7 @@ body {
   width: fit-content;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(182, 123, 69, 0.1);
+  background: rgb(80, 10, 10);
   border: 1px solid rgba(182, 123, 69, 0.18);
   color: var(--about-accent-soft);
   font-size: 13px;
@@ -207,7 +395,8 @@ body {
 
 .about-content h1 {
   font-size: clamp(2.4rem, 4vw, 3.8rem);
-  color: var(--about-heading);
+  color: #5a1414;
+  font-family: "DM Serif Display", serif;
   line-height: 1.05;
   letter-spacing: -0.03em;
   max-width: 12ch;
@@ -277,12 +466,11 @@ body {
   min-width: 180px;
   padding: 14px 30px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #8b4513, #a56437);
+  background: rgb(80, 10, 10);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.02em;
-  box-shadow: 0 14px 30px rgba(139, 69, 19, 0.22);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -291,7 +479,7 @@ body {
 
 .about-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 36px rgba(139, 69, 19, 0.28);
+  box-shadow: 0 14px 30px rgba(219, 213, 213, 0.22);
 }
 
 .about-btn:focus-visible {
@@ -396,6 +584,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
   }
+
   .About-header p {
     font-size: 0.8rem;
     margin-bottom: 1em;
