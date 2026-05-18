@@ -225,6 +225,8 @@ font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 #packed-meals h2 {
+  color: #5a1414;
+  font-family: "DM Serif Display", serif;
   font-size: 55px;
   margin-bottom: 20px;
 }
