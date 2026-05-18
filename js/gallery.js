@@ -40,3 +40,4 @@ function initLightbox() {
 }
 
 window.onload = initLightbox;
+initLightbox();
